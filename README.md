@@ -180,14 +180,14 @@ Body: {
     id: string
     title: string
     type: "input" | "singleSelect" | "multiSelect"| "pullSelect" | "date" | "time" | "score"
-    required: boolean
+    required?: boolean   // 必填时不需要这个参数，多了会报错
     setting?: {
       options: {
         title: string
         status: 1 | 2
       }[]
     }
-    result?: string | number | {
+    result?: string | number | { 
       id: string
       title: string
     } | {
